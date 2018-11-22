@@ -1,0 +1,65 @@
+<! doctype html>
+
+<html>
+
+<head>
+
+<title>Grid thing</title>
+
+<style>
+
+.area-a {
+    grid-area: header;
+    background: blue;
+    color: white;
+    text-align: center;
+  }
+  .area-b {
+    grid-area: main;
+    background: yellow;
+  }
+  .area-cnav {
+    grid-area: sidebar-nav;
+    background: green;
+  }
+  .area-cxtra {
+      grid-area: sidebar-extra;
+      background: red;
+  }
+  .area-d {
+    grid-area: footer;
+    background: lightblue;
+  }
+
+.container {
+    display:grid;
+    grid-template-columns: 200px 50px auto 50px 150px;
+    grid-template-rows: 10% auto 5%;
+    grid-template-areas: 
+    ". header header header ."
+    "sidebar-nav main main main sidebar-extra"
+    ". footer footer footer .";
+    column-gap: 0.5em;
+    row-gap: 0.5em;
+}
+
+</style>
+
+</head>
+
+<body>
+
+        <div class="container">
+
+                <header class="area-a"><h1>Header</h1></header>
+                <footer class="area-d">Footer</footer>
+                <nav class="area-cnav"><header><h3>Nav</h3><ul><li>Link</li><li>Link</li><li>Link</li></ul></header></nav>
+                <section class="area-cxtra">Sidebar</section>
+                <section class="area-b">Main</section>
+                
+                
+                </div>
+
+</body>
+
+</html>
